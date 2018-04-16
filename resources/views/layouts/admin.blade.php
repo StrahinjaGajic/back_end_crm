@@ -1,53 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    @include('partials._header')
-    <style>
-        .search-input::placeholder {
-            color: white;
-        }
-    </style>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+
+    <meta name="viewport"               content="width=device-width, initial-scale=1">
+    <meta name="description"            content="">
+    <meta name="keywords"               content="">
+    <meta name="author"                 content="">
+    <meta name="language"               content="en">
+    <meta name="csrf-token"             content="{{ csrf_token() }}" />
+    <meta name="theme-color"            content="#44c7f4">
+
+    <meta property="og:title"           content="">
+    <meta property="og:site_name"       content="">
+    <meta property="og:image"           content="">
+    <meta property="og:url"             content="">
+    <meta property="og:description"     content="">
+
+    <title>CRM | @yield('page_title')</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link type="image/png"  rel="icon"          href="">
+    <link type="text/css"   rel="stylesheet"    href="{{ asset('css/admin/app.css') }}">
+    <link type="text/css"   rel="stylesheet"    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.standalone.min.css">
+    <link type="text/css"   rel="stylesheet"    href="{{ asset('css/admin/fileinput.min.css') }}">
+
 </head>
-<body>
+<body id="body">
+    @include('layouts.admin.navbar')
+    @include('layouts.admin.sidebar')
 
-<nav class="navbar navbar-inverse" style="padding:0; margin: 0; border: none; border-radius: 0; background-color: #6c6d6d">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/"><img style="height: 15px;" src="{{asset('image/HamburgerIcon.png')}}" /></a>
-            <a style="padding: 10px;" class="navbar-brand" href="/"><img style="height: 36px; " src="{{asset('image/MainSiteLogoTop.png')}}" /></a>
-        </div>
-        {{--<ul class="nav navbar-nav">--}}
-            {{--<li --}}{{--class="active"--}}{{--><a href="#">Home</a></li>--}}
-            {{--<li><a href="#">Page 1</a></li>--}}
-            {{--<li><a href="#">Page 2</a></li>--}}
-        {{--</ul>--}}
-        <div class="pull-right">
-        <form class="navbar-form navbar-left" style="margin: 0; padding: 0; height: 55px;">
-            <div class="form-group search-field" style="background-color: #a6a8ab; border-radius: 0; border: 0; height: 100%;">
-                <input type="text" class="search-input form-control" placeholder="Search" style="color: white; background-color: #a6a8ab; height: 100%; border: 0;">
-                <button type="submit" class="btn btn-default" style="background-color: #a6a8ab; height: 100%; border: 0;"><img style="height: 25px;" src="{{asset('image/SearchIcon.png')}}" /></button>
-            </div>
-        </form>
-        <ul class="nav navbar-nav navbar-left">
-            <li><a style="padding: 10px;" href="#"><img style="height: 35px;" src="{{asset('image/PeronalProfileIcon.png')}}" /></a></li>
-            <li><a style="padding: 10px;" href="#"><img style="height: 35px;" src="{{asset('image/FinancesIcon.png')}}" /></a></li>
-            <li><a style="padding: 10px;" href="#"><img style="height: 35px;" src="{{asset('image/NotificationsIcon.png')}}" /></a></li>
-            <li><a style="padding: 10px;" href="#"><img style="height: 35px;" src="{{asset('image/CheckRemindersIcon.png')}}" /></a></li>
-        </ul>
-        </div>
+    <!-- START MAIN CONTENT -->
+    <div class="content" style="padding-left: 0 !important; padding-bottom: 45px;height: 100%;">
+        @yield('content')
     </div>
-</nav>
+    <!-- END MAIN CONTENT -->
 
-<div class="container-fluid">
-        <div class="row" style="background-color: #44c7f4;">
-            <div class="col-md-2">
-                @include('partials.admin._nav')
-            </div>
-            <div class="col-md-10" style="background-color: #fff;">
-                @yield('content')
-            </div>
-        </div>
-    @include('partials._footer')
-    </div>
+    <footer>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{{asset('js/fileinput.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/plugins/sortable.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('themes/explorer-fa/theme.js')}}" type="text/javascript"></script>
+    <script src="{{asset('themes/fa/theme.js')}}" type="text/javascript"></script>
+    @yield('perPageScripts')
 </body>
 </html>
