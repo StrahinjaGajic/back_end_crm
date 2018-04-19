@@ -29,7 +29,7 @@
     <link type="text/css"   rel="stylesheet"    href="{{ asset('css/admin/fileinput.min.css') }}">
 
 </head>
-<body id="body" sidebar="true" min-sidebar="@yield('min-sidebar')">
+<body id="body" sidebar="true" min-sidebar="{{ $__env->yieldContent('min_sidebar') }}">
     @include('layouts.admin.navbar')
 
     @include('layouts.admin.sidebar')

@@ -1,4 +1,4 @@
-    @section('min-sidebar', 'true')
+    @section('min_sidebar', 'true')
 
     <div class="top-second-sidebar" style="height: 81px; position: relative">
         <div class="col-lg-4 col-md-3 col-sm-3 col-xs-3">
