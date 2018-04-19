@@ -374,14 +374,45 @@ body[sidebar=false] div.shadow {
 a {
   text-decoration: none !important;
 }
-.top-second-sidebar {
+
+body[sidebar=false][min-sidebar=false] div.top-second-sidebar,
+body div.top-second-sidebar {
+  right: 0;
+  left: 0;
+  width: 100%;
   background-color: #D1D2D4;
   min-height: 70px;
-  float: none;
+  top: 104px;
   z-index: 100;
-  top: 52px;
-  width: inherit;
+  position: fixed;
 }
+
+body[sidebar=true][min-sidebar=false] div.top-second-sidebar,
+body[sidebar=true] div.top-second-sidebar {
+  right: 0;
+  left: unset;
+  width: calc(100% - 240px);
+}
+
+body[sidebar=false][min-sidebar=true] div.top-second-sidebar,
+body[min-sidebar=true] div.top-second-sidebar {
+  right: 0;
+  left: unset;
+  width: calc(100% - 200px);
+}
+
+body[sidebar=true][min-sidebar=true] div.top-second-sidebar {
+  right: 0;
+  left: unset;
+  width: calc(100% - 440px);
+}
+
+@media (min-width: 992px) {
+  body div.top-second-sidebar {
+    top: 52px!important;
+  }
+}
+
 /*UPLOAD TENANT IMAGE CSS INPUT*/
 
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
