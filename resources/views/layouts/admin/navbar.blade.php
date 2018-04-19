@@ -11,8 +11,8 @@
         </div>
         <div class="right">
             <form class="search">
-                <input type="text" placeholder="Search...">
                 <button type="submit"><img src="{{ asset('img/admin/icon-search.png') }}" /></button>
+                <input type="text" placeholder="Search...">
             </form>
             <div class="buttons">
                 <a href="" class="profile">
