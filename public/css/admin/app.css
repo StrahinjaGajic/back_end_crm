@@ -136,7 +136,8 @@ body div.nav-bar div.right form.search button img {
   height: 28px;
 }
 
-body div.nav-bar div.right a.button {
+body div.nav-bar div.right a.button,
+body div.nav-bar div.bottom a.button {
   display: inline-block;
   float: left;
   height: 52px;
@@ -145,12 +146,14 @@ body div.nav-bar div.right a.button {
   text-align: center;
 }
 
-body div.nav-bar div.right a.button img {
+body div.nav-bar div.right a.button img,
+body div.nav-bar div.bottom a.button img {
   vertical-align: middle;
   width: 32px;
-}
 
-body div.nav-bar div.right a.profile {
+
+body div.nav-bar div.right a.profile,
+body div.nav-bar div.bottom a.profile {
   display: inline-block;
   float: left;
   padding: 0 30px;
@@ -158,7 +161,8 @@ body div.nav-bar div.right a.profile {
   height: 100%;
 }
 
-body div.nav-bar div.right a.profile div.image {
+body div.nav-bar div.right a.profile div.image,
+body div.nav-bar div.bottom a.profile div.image {
   display: inline-block;
   vertical-align: middle;
   width: 38px;
