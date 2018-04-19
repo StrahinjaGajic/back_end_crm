@@ -44,6 +44,10 @@ body div.nav-bar div.left a.hamburger {
   body div.nav-bar div.left a.hamburger {
     display: none;
   }
+
+  body div.nav-bar div.left a.logo {
+    margin-left: 52px;
+  }
 }
 
 body div.nav-bar div.left a.hamburger img {
