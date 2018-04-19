@@ -1,4 +1,6 @@
-<div class="top-second-sidebar" style="height: 81px; position: relative">
+    @section('min-sidebar', 'true')
+
+    <div class="top-second-sidebar" style="height: 81px; position: relative">
         <div class="col-lg-4 col-md-3 col-sm-3 col-xs-3">
             <div class="pull-left"><h3 style="opacity: 0.7; padding-left: 20px; ">Tenant List</h3></div>
         </div>
