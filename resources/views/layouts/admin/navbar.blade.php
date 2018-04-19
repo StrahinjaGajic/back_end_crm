@@ -1,7 +1,7 @@
 <!-- START NAVBAR -->
 <div class="nav-bar">
     <div class="left">
-        <a href="" class="hamburger">
+        <a href="javascript:void(0);" class="hamburger">
             <img src="{{ asset('img/admin/hamburger.png') }}" />
         </a>
         <a href="" class="logo">

@@ -147,7 +147,7 @@ body div.nav-bar div.right a.profile div.image {
   border-radius: 50%;
 }
 
-body div.sidebar {
+body[sidebar] div.sidebar {
   position: fixed;
   top: 52px;
   left: 0;
@@ -156,57 +156,59 @@ body div.sidebar {
   background-color: #44c7f4;
   color: white;
   overflow-y: auto;
+  transition: all .3s ease-in-out;
 }
 
-body div.sidebar section.open > div.links {
+body[sidebar] div.sidebar section.open > div.links {
   display: block;
 }
 
-body div.sidebar section.logo {
+body[sidebar] div.sidebar section.logo {
   height: 80px;
   padding: 10px;
   padding-left: 62px;
 }
 
-body div.sidebar section.logo img {
+body[sidebar] div.sidebar section.logo img {
   height: 100%;
 }
 
-body div.sidebar section div.category {
+body[sidebar] div.sidebar section div.category {
   height: 35px;
   width: 100%;
   background-color: #6c6d6d;
   font-weight: 700;
+  cursor: pointer;
 }
 
-body div.sidebar section div.category span {
+body[sidebar] div.sidebar section div.category span {
   display: inline-block;
   float: left;
   height: 100%;
   line-height: 35px;
 }
 
-body div.sidebar section div.category span.icon {
+body[sidebar] div.sidebar section div.category span.icon {
   width: 62px;
   padding-left: 22px;
   vertical-align: middle;
 }
 
-body div.sidebar section div.category span.icon img {
+body[sidebar] div.sidebar section div.category span.icon img {
   height: 24px;
   vertical-align: middle;
 }
 
-body div.sidebar section div.category span.title {
+body[sidebar] div.sidebar section div.category span.title {
   font-size: 20px;
 }
 
-body div.sidebar section div.category span.chevron {
+body[sidebar] div.sidebar section div.category span.chevron {
   width: 36px;
   float: right;
 }
 
-body div.sidebar section.open div.category span.chevron img {
+body[sidebar] div.sidebar section.open div.category span.chevron img {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -215,16 +217,16 @@ body div.sidebar section.open div.category span.chevron img {
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=-1, DX=0, DY=0, SizingMethod='auto expand');
 }
 
-body div.sidebar section div.category span.chevron img {
+body[sidebar] div.sidebar section div.category span.chevron img {
   height: 10px;
 }
 
-body div.sidebar section div.links {
+body[sidebar] div.sidebar section div.links {
   padding: 5px 0;
   display: none;
 }
 
-body div.sidebar section div.links a {
+body[sidebar] div.sidebar section div.links a {
   padding-left: 62px;
   display: block;
   width: 100%;
@@ -235,7 +237,7 @@ body div.sidebar section div.links a {
   font-weight: 600;
 }
 
-body div.sidebar section div.links a.active {
+body[sidebar] div.sidebar section div.links a.active {
   color: black;
   background-color: #d0d2d3;
 }
@@ -243,9 +245,25 @@ body div.sidebar section div.links a.active {
 body div.content {
   width: calc(100% - 240px);
   float: right;
-    padding-left: 15px;
+  padding-left: 15px;
   padding-top: 52px;
+  transition: all .3s ease-in-out;
 }
+
+body[sidebar=true] div.content {
+  width: calc(100% - 240px);
+}
+body[sidebar=false] div.content {
+  width: 100%;
+}
+
+body[sidebar=true] div.sidebar {
+  left: 0;
+}
+body[sidebar=false] div.sidebar {
+  left: -240px;
+}
+
 .links-an > ul li a {
     text-decoration: none;
   color: white;
