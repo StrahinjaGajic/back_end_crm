@@ -337,6 +337,7 @@ body[sidebar] div.shadow {
   left: 240px;
   top: 104px;
   z-index: 400;
+  transition: all .3s ease-in-out;
 }
 
 body[sidebar=false] div.shadow {
@@ -344,8 +345,8 @@ body[sidebar=false] div.shadow {
 }
 
 @media (min-width: 992px) {
-  div.shadow {
-    top: 52px;
+  body[sidebar] div.shadow {
+    top: 52px!important;
   }
 }
 
