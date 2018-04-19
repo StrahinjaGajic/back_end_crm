@@ -9,10 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class AdminLoginController extends Controller
 {
     public function __construct() {
-        $this->middleware('guest'); // ako zelim da je u mogucnosti user da se loguje kao admin i admin kao user ostavim kako sad trenutno jeste u suprotnom samo napisem quest
-        if (Auth::guard('admin')->check()) {
-            return redirect()->route('admin.dashboard');
-        }
+
+        $this->middleware('guest:admin',['except' => ['logout']]); // ako zelim da je u mogucnosti user da se loguje kao admin i admin kao user ostavim kako sad trenutno jeste u suprotnom samo napisem quest
+
     }
 
     public function showLoginForm() {
@@ -20,6 +19,7 @@ class AdminLoginController extends Controller
     }
 
     public function login(Request $request) {
+
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required|min:6',
@@ -30,5 +30,8 @@ class AdminLoginController extends Controller
         }
         return redirect()->back()->withInput($request->only('email','remember'));
     }
-
+    public function logout() {
+        Auth::guard('admin')->logout();
+        return redirect()->route('admin.login');
+    }
 }

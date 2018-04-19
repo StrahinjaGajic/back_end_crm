@@ -17,10 +17,12 @@ Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.logi
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
-});
-Route::middleware(['auth:admin','guest'])->group(function () {
+    Route::get('/logout', 'Auth\LoginController@userLogout')->name('user.logout');
+
 });
 Route::middleware(['auth:admin'])->group(function () {
+    Route::get('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+
     Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 
     Route::get('/admin/tenant-list', 'TenantController@index')->name('admin.tenant-list');

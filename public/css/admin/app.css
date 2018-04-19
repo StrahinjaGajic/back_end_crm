@@ -374,6 +374,14 @@ body[sidebar=false] div.shadow {
 a {
   text-decoration: none !important;
 }
+.top-second-sidebar {
+  background-color: #D1D2D4;
+  min-height: 70px;
+  float: none;
+  z-index: 100;
+  top: 52px;
+  width: inherit;
+}
 /*UPLOAD TENANT IMAGE CSS INPUT*/
 
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}

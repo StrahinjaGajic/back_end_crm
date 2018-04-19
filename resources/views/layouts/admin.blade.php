@@ -34,10 +34,13 @@
 
     @include('layouts.admin.sidebar')
 
+    @include('layouts.admin.second-sidebar')
+
     <!-- START MAIN CONTENT -->
     <div class="content" style="padding-left: 0 !important; padding-bottom: 45px;height: 100%;">
         @yield('content')
     </div>
+
     <!-- END MAIN CONTENT -->
 
     <footer>
