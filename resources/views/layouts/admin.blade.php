@@ -57,6 +57,7 @@
     <script src="{{asset('js/plugins/sortable.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('themes/explorer-fa/theme.js')}}" type="text/javascript"></script>
     <script src="{{asset('themes/fa/theme.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/sidebar.js')}}" type="text/javascript"></script>
     @yield('perPageScripts')
 </body>
 </html>
