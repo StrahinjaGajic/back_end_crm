@@ -183,7 +183,7 @@ body div.nav-bar div.bottom a.profile div.image {
 
 body[sidebar] div.sidebar {
   position: fixed;
-  top: 52px;
+  top: 104px;
   left: 0;
   bottom: 0;
   width: 240px;
@@ -191,6 +191,12 @@ body[sidebar] div.sidebar {
   color: white;
   overflow-y: auto;
   transition: all .3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  body[sidebar] div.sidebar {
+    top: 52px;
+  }
 }
 
 body[sidebar] div.sidebar section.open > div.links {
@@ -284,8 +290,14 @@ body div.content {
   width: calc(100% - 240px);
   float: right;
   padding-left: 15px;
-  padding-top: 52px;
+  padding-top: 104px;
   transition: all .3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  body div.content {
+    padding-top: 52px;
+  }
 }
 
 body[sidebar=true] div.content {
