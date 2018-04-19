@@ -166,7 +166,7 @@ body[sidebar] div.sidebar {
 }
 
 body[sidebar] div.sidebar section.open > div.links {
-  display: block;
+  height: auto;
 }
 
 body[sidebar] div.sidebar section.logo {
@@ -230,7 +230,7 @@ body[sidebar] div.sidebar section.open div.category span.chevron img {
 
 body[sidebar] div.sidebar section div.links {
   padding: 5px 0;
-  display: none;
+  height: 0;
   transition: all .3s ease-in-out;
 }
 
