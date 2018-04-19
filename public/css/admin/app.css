@@ -166,7 +166,8 @@ body[sidebar] div.sidebar {
 }
 
 body[sidebar] div.sidebar section.open > div.links {
-  height: auto;
+  max-height: 150px;
+  padding: 5px 0;
 }
 
 body[sidebar] div.sidebar section.logo {
@@ -229,9 +230,10 @@ body[sidebar] div.sidebar section.open div.category span.chevron img {
 }
 
 body[sidebar] div.sidebar section div.links {
-  padding: 5px 0;
-  height: 0;
+  padding: 0;
   transition: all .3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
 }
 
 body[sidebar] div.sidebar section div.links a {
