@@ -91,21 +91,21 @@ body div.nav-bar div.right {
 
 body div.nav-bar div.right form.search {
   float: left;
-  width: 160px;
+  width: 200px;
   height: 100%;
-  background-color: #a6a8ab;
 }
 
 body div.nav-bar div.right form.search input[type="text"] {
   display: inline-block;
-  float: left;
-  width: calc(100% - 52px);
+  float: right;
+  width: 108px;
   height: 100%;
-  background-color: transparent;
+  background-color: #a6a8ab;
   outline: unset;
   border: 0;
   padding-left: 24px;
   color: #d0d2d3;
+  transition: all .3s ease-in-out;
 }
 
 body div.nav-bar div.right form.search input[type="text"]::-webkit-input-placeholder {
@@ -126,16 +126,17 @@ body div.nav-bar div.right form.search input[type="text"]::placeholder {
 
 body div.nav-bar div.right form.search input[type="text"]:focus {
   color: white;
+  width: 148px;
 }
 
 body div.nav-bar div.right form.search button {
   display: inline-block;
-  float: left;
+  float: right;
   height: 100%;
   width: 52px;
   text-align: center;
   border: 0;
-  background-color: transparent;
+  background-color: #a6a8ab;
   cursor: pointer;
 }
 
