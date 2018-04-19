@@ -250,7 +250,7 @@ body div.content {
   height: inherit;
   position: fixed;
   left: 240px;
-  top: 133px;
+  top: 51px;
   z-index: 400;
 }
 #other {
@@ -274,7 +274,9 @@ body div.content {
 .separator {
   margin-top: 20px;
 }
-
+a {
+  text-decoration: none !important;
+}
 /*UPLOAD TENANT IMAGE CSS INPUT*/
 
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}

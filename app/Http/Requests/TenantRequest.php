@@ -27,7 +27,7 @@ class TenantRequest extends FormRequest
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'street_address_1' => 'required|string',
-            'street_address_2' => 'required|string',
+            'street_address_2' => 'string',
             'city' => 'required|string',
             'county' => 'required|string',
             'post_code' => 'required|string',

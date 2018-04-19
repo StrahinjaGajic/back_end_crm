@@ -49,7 +49,7 @@ class TenantUpdateRequest extends FormRequest
         ];
         $photos = count($this->input('tenant_image'));
         foreach (range(0, $photos) as $photo) {
-            $rules['tenant_image.'.$photo] = 'image|mimes:jpeg,bmp,png|max:2000';
+            $rules['tenant_image.'.$photo] = 'required|image|mimes:jpeg,bmp,png|max:2000';
         }
         $files = count($this->input('supporting_files'));
         foreach(range(0, $files) as $file) {

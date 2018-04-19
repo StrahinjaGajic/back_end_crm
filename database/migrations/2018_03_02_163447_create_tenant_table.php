@@ -19,7 +19,7 @@ class CreateTenantTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('street_address_1');
-            $table->string('street_address_2');
+            $table->string('street_address_2')->nullable();
             $table->string('city');
             $table->string('county');
             $table->string('post_code');
@@ -36,7 +36,7 @@ class CreateTenantTable extends Migration
             $table->string('payment_date');
             $table->string('next_of_kin_full_name');
             $table->string('next_of_kin_email')->unique();
-            $table->integer('next_of_kin_phone');
+            $table->string('next_of_kin_phone');
             $table->timestamps();
 
             $table->foreign('property')->references('id')->on('property')->onDelete('cascade');

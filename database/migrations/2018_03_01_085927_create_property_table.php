@@ -17,19 +17,20 @@ class CreatePropertyTable extends Migration
             $table->increments('id');
             $table->integer('tenant_id')->nullable();
             $table->string('property_name');
-            $table->text('street_address_1');
-            $table->text('street_address_2');
+            $table->text('street_address_1')->nullable();
+            $table->text('street_address_2')->nullable();
             $table->string('city');
-            $table->string('county');
-            $table->string('post_code');
+            $table->string('county')->nullable();
+            $table->string('post_code')->nullable();
             $table->string('country');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->text('lat');
             $table->text('lng');
             $table->decimal('rent_price','8','2');
             $table->decimal('property_deposit','8','2');
             $table->string('property_type');
             $table->integer('bedrooms');
+            $table->integer('year_built');
             $table->timestamps();
 
         });

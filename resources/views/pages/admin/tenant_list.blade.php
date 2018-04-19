@@ -49,7 +49,7 @@ z-index: 100;">
                 @foreach($tenants as $tenant)
 
                 <tr style="opacity:0.8;">
-                    <td><b>{{$tenant->first_name.' '.$tenant->last_name}}</b></td>
+                    <td><b><a href="{{ route('admin-display-tenant',$tenant->id) }}">{{$tenant->first_name.' '.$tenant->last_name}}</a></b></td>
                     <td><b>{{ ($tenant->property) ? $tenant->getAssignedPropertyName($tenant->property) : 'Not Assigned' }}</b></td>
                     <td><b>{{$tenant->contract_length}} Months</b></td>
                     <td>

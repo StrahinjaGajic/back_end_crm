@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('page_title', 'Home')
+@section('page_title', 'Add Property')
 
 @section('content')
     <form action="{{ route('admin-save-property') }}" method="post" enctype="multipart/form-data">
@@ -30,7 +30,7 @@
                 </div>
             @endif
         <div class="col-lg-7">
-            <h4>Property name</h4>
+            <h4>Name of Property</h4>
                     <input value="{{old('property_name')}}" class="form-control <?php echo ($errors->has('property_name')) ? 'alert alert-danger' : '';?>" id="property_name" type="text" name="property_name">
             {{--@if($errors->has('fname'))--}}
                 {{--{{ $errors->first('fname') }}--}}
@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <select class="form-control" placeholder="United Kingdom" name="country" id="country" >
                         @foreach($countries as $country)
-                            <option value="{{ $country->code }}">{{ $country->name }}</option>
+                            <option {{($country->code == 'GB') ? 'selected ':''}} value="{{ $country->code }}">{{ $country->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -114,7 +114,7 @@
             var myLatlng = new google.maps.LatLng(51.508742,-0.120850);
             var mapProp = {
                 center:myLatlng,
-                zoom:5,
+                zoom:10,
                 mapTypeId:google.maps.MapTypeId.ROADMAP
 
             };

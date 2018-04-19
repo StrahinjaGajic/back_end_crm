@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
-use App\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasRoles;
+    use Notifiable;
+
+    protected $guard = 'web';
 
     /**
      * The attributes that are mass assignable.
@@ -28,13 +29,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $with = [
-        'roles'
-    ];
-
-    public function image()
-    {
-        return $this->hasOne(Image::class);
-    }
+    protected $table = 'users';
 
 }

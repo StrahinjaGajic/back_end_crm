@@ -31,6 +31,7 @@
 </head>
 <body id="body">
     @include('layouts.admin.navbar')
+
     @include('layouts.admin.sidebar')
 
     <!-- START MAIN CONTENT -->

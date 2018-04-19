@@ -11,10 +11,10 @@
             <span class="chevron"><img src="{{ asset('img/admin/arrow.png') }}" /></span>
         </div>
         <div class="links">
-            <a href="">Property List</a>
-            <a href="admin/add-tenant">Add Property</a>
-            <a href="">Rented Properties</a>
-            <a href="">Vacant Properties</a>
+            <a href="{{ route('admin.property-list') }}">Property List</a>
+            <a href="{{ route('admin.display-property') }}">Add Property</a>
+            <a href="{{ route('admin.list-rented-property') }}">Rented Properties</a>
+            <a href="{{ route('admin.list-free-property') }}">Vacant Properties</a>
             <a href="">Property Finances</a>
         </div>
     </section>
@@ -26,8 +26,8 @@
             <span class="chevron"><img src="{{ asset('img/admin/arrow.png') }}" /></span>
         </div>
         <div class="links">
-            <a href="">Tenant List</a>
-            <a href="">Add Tenant</a>
+            <a href="{{ route('admin.tenant-list') }}">Tenant List</a>
+            <a href="{{ route('admin.add-tenant') }}">Add Tenant</a>
             <a href="">Tenant Payments</a>
         </div>
     </section>
