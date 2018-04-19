@@ -40,6 +40,12 @@ body div.nav-bar div.left a.hamburger {
   text-align: center;
 }
 
+@media (min-width: 992px) {
+  body div.nav-bar div.left a.hamburger {
+    display: none;
+  }
+}
+
 body div.nav-bar div.left a.hamburger img {
   vertical-align: middle;
   height: 18px;
@@ -208,6 +214,11 @@ body[sidebar] div.sidebar section div.category span.chevron {
   float: right;
 }
 
+body[sidebar] div.sidebar section div.category span.chevron img {
+  height: 10px;
+  transition: all .3s ease-in-out;
+}
+
 body[sidebar] div.sidebar section.open div.category span.chevron img {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -217,13 +228,10 @@ body[sidebar] div.sidebar section.open div.category span.chevron img {
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=-1, DX=0, DY=0, SizingMethod='auto expand');
 }
 
-body[sidebar] div.sidebar section div.category span.chevron img {
-  height: 10px;
-}
-
 body[sidebar] div.sidebar section div.links {
   padding: 5px 0;
   display: none;
+  transition: all .3s ease-in-out;
 }
 
 body[sidebar] div.sidebar section div.links a {
